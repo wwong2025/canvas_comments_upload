@@ -29,7 +29,7 @@ assignment = course.get_assignment(assignment_id)
 submissions = assignment.get_submissions()
 for submission in submissions:
     print (submission.user_id,submission.grade,end=' ')
-    if submission.user_id in comments_dict.keys():
+    if str(submission.user_id) in comments_dict.keys():
         comments = comments_dict[str(submission.user_id)]
         print(comments)
         #submission.edit(comment={"text_comment":"test"})

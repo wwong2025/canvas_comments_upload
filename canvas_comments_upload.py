@@ -1,4 +1,3 @@
-# %%
 from canvasapi import Canvas
 import os
 import csv

@@ -18,7 +18,7 @@ commments_csv = "XXXXX"         # XXXXX: insert file name or csv file. first col
 comments_dict = {}
 with open(comments_folder+"\\"+commments_csv,"r",newline='') as csv_file:
     csv_reader = csv.reader(csv_file,delimiter=',')
-    headers = next (csv_reader)
+    #headers = next (csv_reader)    ## needed only if there is a title row
     for row in csv_reader:
         comments_dict[row[0]] = row[1]
 #print (f"{list(comments_dict.items())[:2]}", comments_dict[str(test_user_id)])
